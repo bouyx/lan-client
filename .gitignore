@@ -10,5 +10,5 @@
 #dependencies go
 /go/pkg 
 /go/src/github.com
-go/src/golang.org
-go/src/gopkg.in
+/go/src/golang.org
+/go/src/gopkg.in
