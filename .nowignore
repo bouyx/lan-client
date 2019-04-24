@@ -1,0 +1,6 @@
+README.md
+next/node_modules
+go/pkg/**/*
+go/src/github.com/**/*
+go/src/golang.org/**/*
+go/src/gopkg.in/**/*

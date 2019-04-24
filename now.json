@@ -1,21 +1,35 @@
 {
- "version": 2,
- "name": "leolefevre",
- "builds": [
-   { "src": "js/www/next.config.js", "use": "@now/next" },
-   { "src": "go/**/*go", "use": "@now/go" },
-   {
-     "src": "python/leolefevre_photography/index.py",
-     "use": "@ardent-labs/now-python-wsgi",
-     "config": { "maxLambdaSize": "15mb" }
-   }
- ],
- "routes": [
-   { "src": "/api/time", "dest": "/go/src/test.go" },
-   {
-     "src": "/api/(.*)",
-     "dest": "/python/$1"
-   },
-   { "src": "/(.*)", "dest": "/js/www/$1" }
- ]
+  "version": 2,
+  "name": "lanmanager",
+  "builds": [
+    {
+      "src": "go/**/*.go",
+      "use": "@now/go"
+    },{ "src": "next/next.config.js", "use": "@now/next" },
+    {
+      "src": "python-flask/index.py",
+      "use": "@now/python",
+      "config": {
+        "maxLambdaSize": "15mb"
+      }
+    },
+    {
+      "src": "css/**",
+      "use": "@now/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/go/bite",
+      "dest": "/go/src/main/test.go"
+    },
+    {
+      "src": "/saucisse",
+      "dest": "/python-flask/index.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/next/$1"
+    }
+  ]
 }
