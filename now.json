@@ -1,1 +1,21 @@
-
+{
+ "version": 2,
+ "name": "leolefevre",
+ "builds": [
+   { "src": "js/www/next.config.js", "use": "@now/next" },
+   { "src": "go/**/*go", "use": "@now/go" },
+   {
+     "src": "python/leolefevre_photography/index.py",
+     "use": "@ardent-labs/now-python-wsgi",
+     "config": { "maxLambdaSize": "15mb" }
+   }
+ ],
+ "routes": [
+   { "src": "/api/time", "dest": "/go/src/test.go" },
+   {
+     "src": "/api/(.*)",
+     "dest": "/python/$1"
+   },
+   { "src": "/(.*)", "dest": "/js/www/$1" }
+ ]
+}
