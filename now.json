@@ -5,32 +5,12 @@
     {
       "src": "go/**/*.go",
       "use": "@now/go"
-    },
-    { "src": "next/next.config.js", "use": "@now/next" },
-    {
-      "src": "python-flask/index.py",
-      "use": "@now/python",
-      "config": {
-        "maxLambdaSize": "15mb"
-      }
-    },
-    {
-      "src": "css/**",
-      "use": "@now/static"
     }
   ],
   "routes": [
     {
-      "src": "/go/**",
-      "dest": "/go/src/**"
-    },
-    {
-      "src": "/saucisse",
-      "dest": "/python-flask/index.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/next/$1"
+      "src": "/go/nique",
+      "dest": "/go/src/main/nique.go"
     }
   ]
 }

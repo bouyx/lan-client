@@ -1,4 +1,4 @@
-package main
+package mainu
 
 import (
 	"fmt"
@@ -8,8 +8,4 @@ import (
 
 func Time(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, time.Now().Format(time.RFC1123Z))
-}
-
-func Saucisse(w http.ResponseWriter, r *http.Request){
-	
 }

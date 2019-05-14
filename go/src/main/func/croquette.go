@@ -1,12 +1,11 @@
-package func
+package funcjkh
 
 import (
 	"fmt"
 	"net/http"
-	"time"
 )
 
 
 func Croc(w http.ResponseWriter, r *http.Request){
-	fmt.Printf("quette")
+	fmt.Fprintf(w,"quette")
 }
