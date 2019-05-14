@@ -5,7 +5,8 @@
     {
       "src": "go/**/*.go",
       "use": "@now/go"
-    },{ "src": "next/next.config.js", "use": "@now/next" },
+    },
+    { "src": "next/next.config.js", "use": "@now/next" },
     {
       "src": "python-flask/index.py",
       "use": "@now/python",
@@ -20,8 +21,8 @@
   ],
   "routes": [
     {
-      "src": "/go/bite",
-      "dest": "/go/src/main/test.go"
+      "src": "/go/**",
+      "dest": "/go/src/**"
     },
     {
       "src": "/saucisse",
