@@ -19,6 +19,12 @@
     {
       "src": "/(.*)",
       "dest": "/next/$1"
+    },
+    {
+      "src": ".*",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
     }
   ]
 }
