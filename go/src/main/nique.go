@@ -1,10 +1,11 @@
-package main
+package handler
 
 import (
 	"fmt"
 	"net/http"
-	"time"
 )
+
 func Nique(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, time.Now().Format(time.RFC1123Z))
+
+	fmt.Fprintf(w, "prout")
 }

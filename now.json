@@ -3,14 +3,22 @@
   "name": "lanmanager",
   "builds": [
     {
+      "src": "next/package.json",
+      "use": "@now/next"
+    },
+    {
       "src": "go/**/*.go",
       "use": "@now/go"
     }
   ],
   "routes": [
     {
-      "src": "/go/nique",
+      "src": "/go/prout",
       "dest": "/go/src/main/nique.go"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/next/$1"
     }
   ]
 }

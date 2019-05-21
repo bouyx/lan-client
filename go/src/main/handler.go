@@ -1,4 +1,5 @@
-package mainu
+
+package handler
 
 import (
 	"fmt"
