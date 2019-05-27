@@ -13,8 +13,11 @@
   ],
   "routes": [
     {
-      "src": "/go/prout",
-      "dest": "/go/src/main/nique.go"
+      "src": "/api/login",
+      "dest": "/go/src/main/routes/login.go",
+      "methods": [
+        "POST"
+      ]
     },
     {
       "src": "/(.*)",
