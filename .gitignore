@@ -8,6 +8,7 @@
 /next/package-lock.json
 
 #dependencies go
+/go/bin
 /go/pkg 
 /go/src/github.com
 /go/src/golang.org

@@ -3,14 +3,31 @@
   "name": "lanmanager",
   "builds": [
     {
+      "src": "next/package.json",
+      "use": "@now/next"
+    },
+    {
       "src": "go/**/*.go",
       "use": "@now/go"
     }
   ],
   "routes": [
     {
-      "src": "/go/nique",
-      "dest": "/go/src/main/nique.go"
+      "src": "/api/login",
+      "dest": "/go/src/main/routes/login.go",
+      "methods": [
+        "POST"
+      ]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/next/$1"
+    },
+    {
+      "src": ".*",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
     }
   ]
 }

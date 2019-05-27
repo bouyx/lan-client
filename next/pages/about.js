@@ -1,9 +1,7 @@
-import Layout from '../components/MyLayout.js'
-
-export default function About() {
+export default function Details() {
   return (
-    <Layout>
-      <p>Saucisse</p>
-    </Layout>
+    <div>
+      <p>elle est ou la pulette</p>
+    </div>
   )
 }
